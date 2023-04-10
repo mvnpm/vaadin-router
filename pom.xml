@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mvnpm.locked.at.vaadin</groupId>
     <artifactId>router</artifactId>
-    <version>1.7.5</version>
+    <version>1.7.5.2</version>
     <name>vaadin router</name>
     <description>Small and powerful client-side router for Web Components. Framework-agnostic.</description>
     <url>https://vaadin.com</url>
@@ -78,8 +78,19 @@
     <dependencies>
         <dependency>
             <groupId>org.mvnpm.at.vaadin</groupId>
+            <artifactId>router</artifactId>
+            <version>1.7.5</version>
+        </dependency>    
+        <dependency>
+            <groupId>org.mvnpm.at.vaadin</groupId>
             <artifactId>vaadin-usage-statistics</artifactId>
             <version>2.1.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mvnpm.at.vaadin</groupId>
+                    <artifactId>vaadin-development-mode-detector</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.mvnpm.at.vaadin</groupId>
